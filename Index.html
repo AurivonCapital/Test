@@ -31,7 +31,9 @@
         .gold-gradient-text {
             background: linear-gradient(to bottom, #ffffff 30%, #d4af37 100%);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-fill-color: transparent; /* Standard property */
+            -webkit-background-clip: text; /* Vendor prefix for compatibility */
+            color: transparent; /* Fallback for browsers that don't support text-clipping */
             font-weight: 900;
         }
 
