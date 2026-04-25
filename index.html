@@ -20,18 +20,25 @@
         }
 
         /* BACKGROUND LAYER */
-        .hero-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* This links to your uploaded office photo */
-            background-image: linear-gradient(rgba(10, 14, 18, 0.8), rgba(10, 14, 18, 0.8)), 
-                              url('office-background.jpg'); 
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
+        <style>
+    /* ... other styles ... */
+
+    .hero-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Change .jpg to .png here */
+        background-image: linear-gradient(rgba(10, 14, 18, 0.8), rgba(10, 14, 18, 0.8)), 
+                          url('office-background.png'); 
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
+
+    /* ... other styles ... */
+</style>
         }
 
         .gold-gradient {
