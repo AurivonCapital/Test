@@ -7,51 +7,37 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
+        /* This section MUST be between <style> tags to stay invisible */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0f172a; /* Deep navy fallback */
+            background-color: #0a0e17;
             color: white;
             overflow-x: hidden;
         }
 
-        /* BACKGROUND LAYER */
-        <style>
-    /* ... other styles ... */
-
-    .hero-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /* Change .jpg to .png here */
-        background-image: linear-gradient(rgba(10, 14, 18, 0.8), rgba(10, 14, 18, 0.8)), 
-                          url('office-background.png'); 
-        background-size: cover;
-        background-position: center;
-        z-index: -1;
-    }
-
-    /* ... other styles ... */
-</style>
+        .hero-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Ensure your image file is named exactly office-background.png in GitHub */
+            background-image: linear-gradient(rgba(10, 14, 18, 0.85), rgba(10, 14, 18, 0.85)), 
+                              url('office-background.png'); 
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
         }
 
         .gold-gradient {
             background: linear-gradient(to bottom, #ffffff 20%, #FFD700 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-
-        .glass-card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-left: 4px solid #FFD700;
+            font-weight: 900;
         }
 
         .btn-glow {
@@ -70,56 +56,29 @@
 
     <div class="hero-bg"></div>
 
-    <nav class="p-6 bg-black/40 backdrop-blur-md border-b border-white/10 flex justify-between items-center sticky top-0 z-50">
+    <nav class="p-6 bg-black/60 backdrop-blur-lg flex justify-between items-center sticky top-0 z-50">
         <div class="text-2xl font-black italic tracking-tighter">
             AURIVON <span class="text-blue-500">CAPITAL</span>
         </div>
         <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
             <a href="index.html" class="text-blue-400">Home</a>
-            <a href="course.html" class="hover:text-blue-400">Course</a>
-            <a href="recruitment.html" class="hover:text-blue-400">Recruitment</a>
-            <a href="contact.html" class="hover:text-blue-400">Contact</a>
+            <a href="course.html" class="hover:text-blue-400 transition">Course</a>
+            <a href="recruitment.html" class="hover:text-blue-400 transition">Recruitment</a>
+            <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
         </div>
     </nav>
 
-    <main class="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
-        <header class="max-w-4xl mb-16">
-            <h2 class="text-yellow-500 font-bold uppercase tracking-[0.3em] text-sm mb-4">Aurivon Capital Presents</h2>
-            <h1 class="gold-gradient text-5xl md:text-8xl font-black uppercase mb-6 leading-tight">The Trading Suite</h1>
-            <p class="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
-                Singapore’s premier co-working ecosystem engineered for <br class="hidden md:block">
-                Proprietary Traders and Market Professionals.
-            </p>
-        </header>
+    <main class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+        <h2 class="text-yellow-500 font-bold uppercase tracking-[0.3em] text-sm mb-4">Aurivon Capital Presents</h2>
+        <h1 class="gold-gradient text-6xl md:text-8xl uppercase mb-6 leading-tight">The Trading Suite</h1>
+        <p class="text-xl md:text-2xl text-slate-300 max-w-3xl font-light mb-12">
+            Singapore’s premier co-working ecosystem engineered for Proprietary Traders and Market Professionals.
+        </p>
 
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl w-full text-left">
-            <div class="glass-card p-8 rounded-xl">
-                <i class="fas fa-microchip text-yellow-500 text-3xl mb-4"></i>
-                <h3 class="text-xl font-bold text-yellow-500 uppercase mb-2">Infrastructure</h3>
-                <p class="text-slate-200">Ultra-low latency fiber backbone engineered for institutional execution.</p>
-            </div>
-            <div class="glass-card p-8 rounded-xl">
-                <i class="fas fa-users text-yellow-500 text-3xl mb-4"></i>
-                <h3 class="text-xl font-bold text-yellow-500 uppercase mb-2">Community</h3>
-                <p class="text-slate-200">An elite network of FX and Gold veterans sharing real-time alpha.</p>
-            </div>
-            <div class="glass-card p-8 rounded-xl">
-                <i class="fas fa-chart-line text-yellow-500 text-3xl mb-4"></i>
-                <h3 class="text-xl font-bold text-yellow-500 uppercase mb-2">Opportunity</h3>
-                <p class="text-slate-200">Direct capital funding and performance-led hiring pipelines.</p>
-            </div>
-        </div>
-
-        <div class="mt-20">
-            <a href="contact.html" class="btn-glow inline-block px-12 py-5 rounded-full text-lg font-black uppercase tracking-widest italic">
-                Join the Waitlist
-            </a>
-        </div>
+        <a href="contact.html" class="btn-glow inline-block px-12 py-5 rounded-full text-lg font-black uppercase tracking-widest italic">
+            Join the Waitlist
+        </a>
     </main>
-
-    <footer class="py-12 border-t border-white/5 text-slate-500 text-[10px] uppercase tracking-[0.4em]">
-        &copy; 2026 Aurivon Capital Singapore. All Rights Reserved.
-    </footer>
 
 </body>
 </html>
